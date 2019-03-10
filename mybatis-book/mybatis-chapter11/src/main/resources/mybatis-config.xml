@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <settings>
+        <setting name="useGeneratedKeys" value="true"/>
+        <!-- 打开延迟加载的开关 -->
+        <setting name="lazyLoadingEnabled" value="true" />
+        <!-- 将积极加载改为懒加载即按需加载 -->
+        <setting name="aggressiveLazyLoading" value="false" />
+        <!-- toString,hashCode等方法不触发懒加载 -->
+        <setting name="lazyLoadTriggerMethods" value=""/>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <!--<setting name="proxyFactory" value="CGLIB"/>-->
+        <setting name="cacheEnabled" value="false" />
+        <setting name="localCacheScope" value="STATEMENT" />
+    </settings>
+
+    <environments default="dev" >
+        <environment id="dev">
+            <transactionManager type="JDBC">
+                <property name="" value="" />
+            </transactionManager>
+            <dataSource type="UNPOOLED">
+                <property name="driver" value="org.hsqldb.jdbcDriver" />
+                <property name="url" value="jdbc:hsqldb:mem:mybatis" />
+                <property name="username" value="sa" />
+                <property name="password" value="" />
+            </dataSource>
+        </environment>
+        <environment id="qa">
+            <transactionManager type="JDBC">
+                <property name="" value="" />
+            </transactionManager>
+            <dataSource type="UNPOOLED">
+                <property name="driver" value="org.hsqldb.jdbcDriver" />
+                <property name="url" value="jdbc:hsqldb:mem:mybatis_qa" />
+                <property name="username" value="admin" />
+                <property name="password" value="admin" />
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="com/blog4java/mybatis/example/mapper/UserMapper.xml"/>
+        <mapper resource="com/blog4java/mybatis/example/mapper/OrderMapper.xml"/>
+    </mappers>
+</configuration>

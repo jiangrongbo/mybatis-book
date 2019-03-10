@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blog4java.mybatis.example.mapper.UserMapper">
+
+    <resultMap id="detailMap" type="com.blog4java.mybatis.example.entity.User">
+        <collection property="orders" ofType="com.blog4java.mybatis.example.entity.Order"
+                    select="com.blog4java.mybatis.example.mapper.OrderMapper.listOrdersByUserId"
+                    javaType="java.util.ArrayList"
+                    column="id">
+        </collection>
+    </resultMap>
+
+    <resultMap autoMapping="true" id="detailMapForJoin" type="com.blog4java.mybatis.example.entity.User">
+        <collection property="orders" ofType="com.blog4java.mybatis.example.entity.Order">
+            <id column="id" property="id"></id>
+            <result column="createTime" property="createTime"></result>
+            <result column="userId" property="userId"></result>
+            <result column="amount" property="amount"></result>
+            <result column="orderNo" property="orderNo"></result>
+            <result column="address" property="address"></result>
+        </collection>
+    </resultMap>
+    
+    <resultMap id="userDetailMap" type="com.blog4java.mybatis.example.entity.User">
+        <result property="id" column="id"></result>
+        <result property="name" column="name"></result>
+        <result property="createTime" column="createTime"></result>
+        <result property="password" column="password"></result>
+        <result property="phone" column="phone"></result>
+    </resultMap>
+    
+    <resultMap id="detailMapForDiscriminator" type="com.blog4java.mybatis.example.entity.User">
+        <discriminator javaType="String" column="gender">
+            <case value="female" resultType="com.blog4java.mybatis.example.entity.User">
+                <collection property="orders" ofType="com.blog4java.mybatis.example.entity.Order"
+                            select="com.blog4java.mybatis.example.mapper.OrderMapper.listOrdersByUserId"
+                            javaType="java.util.ArrayList"
+                            column="id">
+                </collection>
+            </case>
+        </discriminator>
+    </resultMap>
+
+    <select id="getUserById" resultType="com.blog4java.mybatis.example.entity.User">
+        select * from user where id = #{userId}
+    </select>
+
+    <select id="getUserByIdFull" resultMap="detailMap">
+        select * from user where id = #{userId}
+    </select>
+
+    <select id="getUserByIdForJoin" resultMap="detailMapForJoin">
+        select u.*,o.* from user u left join "order" o on (o.userId = u.id) where u.id = #{userId}
+    </select>
+
+    <select id="getUserByIdForUserDetailMap" resultMap="userDetailMap">
+        select * from user where id = #{userId}
+    </select>
+
+    <select id="getUserByIdForDiscriminator" resultMap="detailMapForDiscriminator">
+        select * from user where id = #{userId}
+    </select>
+
+    <select id="getUsersByPhone" resultMap="detailMapForJoin">
+        select u.*,o.* from user u left join "order" o on (o.userId = u.id) where u.phone = #{phone}
+    </select>
+
+</mapper>
+
+
+

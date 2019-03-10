@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<users>
+    <user id = "1">
+        <name>张三</name>
+        <createTime>2018-06-06 00:00:00</createTime>
+        <passward>admin</passward>
+        <phone>180000000</phone>
+        <nickName>阿毛</nickName>
+    </user>
+    <user id = "2">
+        <name>李四</name>
+        <createTime>2018-06-06 00:00:00</createTime>
+        <passward>admin</passward>
+        <phone>180000001</phone>
+        <nickName>明明</nickName>
+    </user>
+</users>

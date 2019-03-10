@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+		PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="useGeneratedKeys" value="true"/>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+		<setting name="logImpl" value="LOG4J"/>
+	</settings>
+
+	<environments default="dev" >
+		<environment id="dev">
+			<transactionManager type="JDBC">
+				<property name="" value="" />
+			</transactionManager>
+			<dataSource type="UNPOOLED">
+				<property name="driver" value="org.hsqldb.jdbcDriver" />
+				<property name="url" value="jdbc:hsqldb:mem:mybatis" />
+				<property name="username" value="sa" />
+				<property name="password" value="" />
+			</dataSource>
+		</environment>
+		<environment id="qa">
+			<transactionManager type="JDBC">
+				<property name="" value="" />
+			</transactionManager>
+			<dataSource type="UNPOOLED">
+				<property name="driver" value="org.hsqldb.jdbcDriver" />
+				<property name="url" value="jdbc:hsqldb:mem:mybatis_qa" />
+				<property name="username" value="admin" />
+				<property name="password" value="admin" />
+			</dataSource>
+		</environment>
+	</environments>
+
+
+
+</configuration>
