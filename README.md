@@ -1,5 +1,5 @@
-# 《Mybatis3源码深度解析》 随书源码  
-
+### 内容概要  
+本书主要分为两个篇章，第一篇章为Mybatis3源码篇，从第1章至11章，主要介绍Mybatis框架各个特性的实现原理。第二篇章为Mybatis Spring源码篇，主要介绍Mybatis框架与Spring框架整合原理。  
 <b><details><summary>📚 第一章 搭建Mybatis源码环境</summary></b>
 > 主要介绍如何搭建Mybatis源码调试环境，包括Mybatis框架源码获取途径，如何导入集成开发工具，如何运行Mybatis源码中自带的测试用例。
 
