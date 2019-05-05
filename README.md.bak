@@ -61,6 +61,6 @@
 </details>
 
 <b><details><summary>📚 第十三章 Mybatis与Spring整合案例</summary></b>
-> 本章介绍了Spring框架中的一些核心概念，并介绍了Spring IoC容器的使用过程。接着介绍了Mybatis和Spring整合后，动态代理产生的Mapper对象是如何与Spring Ioc容器进行关联的，最后介绍了Mybatis整合Spring事务管理的实现原理。
+> 本章中以一个用户注册RESTful接口案例，介绍了Mybatis框架与Spring框架整合的最佳实践。
 
 </details>
