@@ -1,5 +1,12 @@
+Mybatis源码深度解析
+================
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2f0a0191b02448e6919aca6ce12a1584)](https://app.codacy.com/app/yu199195/hmily?utm_source=github.com&utm_medium=referral&utm_content=yu199195/hmily&utm_campaign=Badge_Grade_Settings)
+[![Total lines](https://tokei.rs/b1/github/rongbo-j/mybatis-book?category=lines)](https://github.com/rongbo-j/mybatis-book)
+
+[![Build Status](https://travis-ci.org/rongbo-j/mybatis-book.svg?branch=master)](https://travis-ci.org/rongbo-j/mybatis-book)
+
 ### 图书目录  
-<b><details><summary>🃚 点我查看</summary></b>
+<b><details><summary>点我查看</summary></b>
 前言	4  
 第1篇 Mybatis3源码	7  
 第1章 搭建Mybatis源码环境	7  
