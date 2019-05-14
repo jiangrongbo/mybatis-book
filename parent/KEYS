@@ -1,0 +1,97 @@
+This file contains the PGP and GPG keys of MyBatis
+developers. Please don't use them for email unless you have
+to. Their main purpose is code signing.
+
+Users: pgp < KEYS
+       gpg --import KEYS
+
+MyBatis Developers:
+        pgp -kxa <your name> and append it to this file.
+        (pgpk -ll <your name> && pgpk -xa <your name>) >> this file.
+        (gpg --list-sigs <your name> \
+             && gpg --armor --export <your name>) >> this file.
+
+************************************************************************************************************
+pub   1024D/41A0D191 2010-02-06
+uid                  Simone Tripodi (Simo) <simone.tripodi@gmail.com>
+sig 3        41A0D191 2010-02-06  Simone Tripodi (Simo) <simone.tripodi@gmail.com>
+sub   4096g/3DE4A683 2010-02-06
+sig          41A0D191 2010-02-06  Simone Tripodi (Simo) <simone.tripodi@gmail.com>
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1.4.10 (Darwin)
+
+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
+TMXEmQ==
+=rWlb
+-----END PGP PUBLIC KEY BLOCK-----
+pub   2048R/964A6511 2009-08-17
+uid                  Nathan Maves <nathan.maves@gmail.com>
+sig 3        964A6511 2009-08-17  Nathan Maves <nathan.maves@gmail.com>
+sub   2048R/593F31A5 2009-08-17
+sig          964A6511 2009-08-17  Nathan Maves <nathan.maves@gmail.com>
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG/MacGPG2 v2.0.12 (Darwin)
+
+mQENBEqJfxABCADc2+LqOD8VkirFvZ0G6bHasqdaTuWtNgwxFnRAu1Nk+w0J92W4
+BHpBvypSxp6s1ITfacS3sJ0OXT38M3oVIJbpvO3NXFj1ZtQZb1VFfjMzqhTxatuN
+d+bgFWUvdh1L8A0zWIfUEmJeiOOMnr0gb/5/S6FQp6rmHTJipR/Tz7CsYum3itmv
+Du+cYGtNHPc8cwkDh2Mk80zHmMgJNiTgytWi8F9WOT1/ezeilfBt7y6SvYEh0mLf
+R94KNlUZet7DZrVScXxmUxJEzdkBq1/fhvjfSaPD8ObqMyPOCp4He/Qd/b4FWFF3
+Dv+93cP4SO+rJIBkikWoqspQvTr6EeTfW99HABEBAAG0JU5hdGhhbiBNYXZlcyA8
+bmF0aGFuLm1hdmVzQGdtYWlsLmNvbT6JATYEEwECACAFAkqJfxACGwMGCwkIBwMC
+BBUCCAMEFgIDAQIeAQIXgAAKCRCD57OHlkplEQFpB/9HnFI/pU78d56dqIjDP7Tv
+HHSKjJ7xxe53ggFyoqxTtW4DALl4pHgVPD8uEAvWCvGvHEYqfaCB1AsIHfNx9E46
+VlpUGUWTrgBtIPPKjDnFNgQt9xTOzOLGNCjCjfwasaywyr+gX0DrgAr8Fo1h9ucn
+hX4wzp6S5oXm6lyAjreNYmzeQad+Ah8xPvvYeKSh4AnRyIfcbJtMnd2HpSawnSih
+1p1yOvnvXS3NRL77zRtEcgVS9yPL43KyLrJf5EVnvopyim1HxU9srxU38fYohcsj
+zJDGD7K1UFuuhKa9WhvBNObXvyE456ajuG6hOiPeg42S7odcvkVxLkkz66BecFmI
+uQENBEqJfxABCAC2rMG3SFC3z8+k+xsb9JeELL9I1/aCZe97VM2iOpK2LHpYvKRD
+gqJh3sVGahjeCQF8rR9fef7P+NGG9u17mTlFWBBFTGr/sDfWcD5mGG1CYG+pXlk6
+uHnE/HYqC5A6YFzGMs+XiNv9UIadDGFf822ObGntIOekcGu9iTtDVxSBt9jDwJGv
+x412MzdxFjgGQ8wXAxBl8ke58LV64QpmnnQTUmw4JVPxSJFrdZYCB/8OD5YXxq5v
+d/UaWwwpWPpzzrFd/I2/WlQ3mHR6QOCFsngdG0JRsHq0aYfFeEA1gaJn2XZELAEE
+F70BQQJ18qvGLS+ZLU+IDMZ+m7YgaQBl3U69ABEBAAGJAR8EGAECAAkFAkqJfxAC
+GwwACgkQg+ezh5ZKZRG6XQgAtu74j8XN32MqJdE82xQF3xaOdxPosPEPGjxnDt+x
+xBgO2/nKj2GrLLZ9fwRHWwJwaKtPk9Fv4uGGiLpCvRMTOhkpBuPAse24i7Hx2fuI
+C2nEvUo5pGW9JKyxAaXR5oMK3gYW1UX91pu7D+ZDRDktoUIb9j0fCwwqJbwa/EKT
+1MV8NT7yvY/say2LyutX08+ix6XyOLVH4yUzVwBGlKfqEBkQ+JxWbzgsZj7g52KF
+S6V77Cc1BZbEg96qJw1RTtLyTwXDNx62EjJ5TO+0UhGxhM4BVR7maESxhjaKnyM7
+CH005E+8CKQHWTcbhhGDuKXVSp5jOKPimc0sAG3qXC3A8A==
+=2smu
+-----END PGP PUBLIC KEY BLOCK-----

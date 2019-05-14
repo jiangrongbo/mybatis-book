@@ -1,0 +1,1211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+       Copyright 2010-2018 the original author or authors.
+
+       Licensed under the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the License.
+       You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+       Unless required by applicable law or agreed to in writing, software
+       distributed under the License is distributed on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+       See the License for the specific language governing permissions and
+       limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.mybatis</groupId>
+  <artifactId>mybatis-parent</artifactId>
+  <version>31-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>mybatis-parent</name>
+  <description>The MyBatis parent POM.</description>
+  <url>http://www.mybatis.org/</url>
+  <inceptionYear>2010</inceptionYear>
+  <organization>
+    <name>MyBatis.org</name>
+    <url>http://www.mybatis.org/</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <!-- committers are enlisted by name ASC, except Clinton who is the founder -->
+    <developer>
+      <id>cbegin</id>
+      <name>Clinton Begin</name>
+      <email>clinton.begin@gmail.com</email>
+      <roles>
+        <role>Owner</role>
+        <role>Founder</role>
+        <role>Committer</role>
+      </roles>
+    </developer>
+
+    <developer>
+      <id>brandon.goodin</id>
+      <name>Brandon Goodin</name>
+      <email>brandon.goodin@gmail.com</email>
+      <roles>
+        <role>Committer</role>
+      </roles>
+    </developer>
+
+    <developer>
+      <id>mentat6114</id>
+      <name>Christian Poitras</name>
+      <email>christian.poitras@ircm.qc.ca</email>
+      <timezone>-5</timezone>
+      <roles>
+        <role>Committer</role>
+      </roles>
+    </developer>
+
+    <developer>
+      <id>emacarron</id>
+      <name>Eduardo Macarron</name>
+      <email>eduardo.macarron@gmail.com</email>
+      <roles>
+        <role>Committer</role>
+      </roles>
+    </developer>
+
+    <developer>
+      <id>mnesarco</id>
+      <name>Frank Martinez</name>
+      <email>mnesarco@gmail.com</email>
+      <roles>
+        <role>Committer</role>
+      </roles>
+    </developer>
+
+    <developer>
+      <id>agustafson</id>
+      <name>Andrew Gustafson</name>
+      <email>gus4000@gmail.com</email>
+      <roles>
+        <role>Committer</role>
+      </roles>
+    </developer>
+
+    <developer>
+      <id>hpresnall</id>
+      <name>Hunter Presnall</name>
+      <email>hpresnall@gmail.com</email>
+      <roles>
+        <role>Committer</role>
+      </roles>
+    </developer>
+
+    <developer>
+      <id>harawata</id>
+      <name>Iwao Ave</name>
+      <email>harawata@gmail.com</email>
+      <roles>
+        <role>Committer</role>
+      </roles>
+    </developer>
+
+    <developer>
+      <id>jeffgbutler</id>
+      <name>Jeff Butler</name>
+      <email>jeffgbutler@gmail.com</email>
+      <roles>
+        <role>Committer</role>
+      </roles>
+    </developer>
+
+    <developer>
+      <id>hazendaz</id>
+      <name>Jeremy Landis</name>
+      <email>jeremylandis@hotmail.com</email>
+      <roles>
+        <role>Committer</role>
+      </roles>
+      <timezone>-5</timezone>
+    </developer>
+
+    <developer>
+      <id>nospam@kaigrabfelder.de</id>
+      <name>Kai Grabfelder</name>
+      <email>nospam@kaigrabfelder.de</email>
+      <roles>
+        <role>Committer</role>
+      </roles>
+    </developer>
+
+    <developer>
+      <id>lmeadors</id>
+      <name>Larry Meadors</name>
+      <email>larry.meadors@gmail.com</email>
+      <roles>
+        <role>Committer</role>
+      </roles>
+    </developer>
+
+    <developer>
+      <id>marcosperanza</id>
+      <name>Marco Speranza</name>
+      <email>marco.speranza79@gmail.com</email>
+      <timezone>+1</timezone>
+      <roles>
+        <role>Committer</role>
+      </roles>
+    </developer>
+
+    <developer>
+      <id>nmaves</id>
+      <name>Nathan Maves</name>
+      <email>nathan.maves@gmail.com</email>
+      <roles>
+        <role>Committer</role>
+      </roles>
+    </developer>
+
+    <developer>
+      <id>pboonphong</id>
+      <name>Putthiphong Boonphong</name>
+      <email>putthiphong.boonphong@gmail.com</email>
+      <roles>
+        <role>Committer</role>
+      </roles>
+    </developer>
+
+    <developer>
+      <id>simonetripodi</id>
+      <name>Simone Tripodi</name>
+      <email>simone.tripodi@gmail.com</email>
+      <timezone>+1</timezone>
+      <roles>
+        <role>Committer</role>
+      </roles>
+    </developer>
+
+    <developer>
+      <id>h3adache</id>
+      <name>Tim Chen</name>
+      <email>chengt@gmail.com</email>
+      <roles>
+        <role>Committer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <mailingLists>
+    <mailingList>
+      <name>mybatis-dev</name>
+      <archive>https://groups.google.com/forum/#!forum/mybatis-dev</archive>
+      <subscribe>https://groups.google.com/forum/#!forum/mybatis-dev/join</subscribe>
+      <unsubscribe>https://groups.google.com/forum/#!forum/mybatis-dev/join</unsubscribe>
+      <post>mybatis-dev@googlegroups.com</post>
+    </mailingList>
+
+    <mailingList>
+      <name>mybatis-user</name>
+      <archive>https://groups.google.com/forum/#!forum/mybatis-user</archive>
+      <subscribe>https://groups.google.com/forum/#!forum/mybatis-user/join</subscribe>
+      <unsubscribe>https://groups.google.com/forum/#!forum/mybatis-user/join</unsubscribe>
+      <post>mybatis-user@googlegroups.com</post>
+      <otherArchives>
+        <otherArchive>http://mybatis-user.963551.n3.nabble.com/</otherArchive>
+      </otherArchives>
+    </mailingList>
+
+    <mailingList>
+      <name>mybatis-commits</name>
+      <archive>https://groups.google.com/forum/#!forum/mybatis-commits</archive>
+      <subscribe>https://groups.google.com/forum/#!forum/mybatis-commits/join</subscribe>
+      <unsubscribe>https://groups.google.com/forum/#!forum/mybatis-commits/join</unsubscribe>
+      <post>mybatis-commits@googlegroups.com</post>
+    </mailingList>
+  </mailingLists>
+
+  <scm>
+    <url>https://github.com/mybatis/parent</url>
+    <connection>scm:git:ssh://github.com/mybatis/parent.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/mybatis/parent.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+  <issueManagement>
+    <system>GitHub Issue Management</system>
+    <url>https://github.com/mybatis/parent/issues</url>
+  </issueManagement>
+  <ciManagement>
+    <system>Travis CI</system>
+    <url>https://travis-ci.org/mybatis/parent</url>
+  </ciManagement>
+  <distributionManagement>
+    <site>
+      <id>gh-pages</id>
+      <name>Mybatis GitHub Pages</name>
+      <url>github:ssh://mybatis.github.io/parent/</url>
+    </site>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
+  <properties>
+    <!--
+     | General configuration
+    -->
+    <checkstyle.config>checkstyle.xml</checkstyle.config>
+    <clirr.comparisonVersion>30</clirr.comparisonVersion>
+    <gcu.product>${project.name}</gcu.product>
+    <maven.min-version>3.2.5</maven.min-version>
+    <spotbugs.onlyAnalyze />
+
+    <!--
+     | Maven confirmation
+    -->
+    <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ssZ</maven.build.timestamp.format>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
+    <maven.compiler.testSource>1.8</maven.compiler.testSource>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    <!--
+     | Dependency versions
+    -->
+    <base-bundle.version>8</base-bundle.version>
+    <checkstyle-core.version>8.8</checkstyle-core.version>
+    <fluido.version>1.7</fluido.version>
+    <junit-engine.version>5.1.0</junit-engine.version>
+    <junit-platform.version>1.1.0</junit-platform.version>
+
+    <!--
+     | Plugins versions
+    -->
+    <animal.version>1.16</animal.version>
+    <antrun.version>1.8</antrun.version>
+    <assembly.version>3.1.0</assembly.version>
+    <build-tools.version>1.1.7</build-tools.version>
+    <bundle.version>3.3.0</bundle.version>
+    <changes.version>2.12.1</changes.version>
+    <checkstyle.plugin>3.0.0</checkstyle.plugin>
+    <clean.version>3.0.0</clean.version>
+    <clirr.version>2.8</clirr.version>
+    <compiler.version>3.7.0</compiler.version>
+    <coveralls.version>4.3.0</coveralls.version>
+    <dependency.version>3.0.2</dependency.version>
+    <deploy.version>2.8.2</deploy.version>
+    <enforcer.version>3.0.0-M1</enforcer.version>
+    <formatter.version>2.7.0</formatter.version> <!-- Do not upgrade to 2.7.1 as it currently has bugs due to eclipse oxygen.2 (fixed in oxygen.3 -->
+    <gpg.version>1.6</gpg.version>
+    <install.version>2.5.2</install.version>
+    <jacoco.version>0.8.1</jacoco.version>
+    <jar.version>3.0.2</jar.version>
+    <javadoc.version>3.0.0</javadoc.version>
+    <jdepend.version>2.0</jdepend.version>
+    <jxr.version>2.5</jxr.version>
+    <license.version>3.0</license.version>
+    <lifecycle.version>1.0.0</lifecycle.version>
+    <pdf.version>1.3</pdf.version>
+    <pmd.version>3.9.0</pmd.version>
+    <project-info.version>2.9</project-info.version>
+    <release.version>2.5.3</release.version>
+    <resource.version>3.0.2</resource.version>
+    <scm.version>1.9.5</scm.version>
+    <shade.version>3.1.0</shade.version>
+    <site.version>3.7</site.version>
+    <source.version>3.0.1</source.version>
+    <spotbugs.version>3.1.3</spotbugs.version>
+    <surefire.version>2.19.1</surefire.version> <!-- TODO: 2.22.0 is supposed to support junit 5 so we need to stay on 2.19.1 for now -->
+    <taglist.version>2.4</taglist.version>
+    <versions.version>2.5</versions.version>
+    <wagon-git.version>2.0.3</wagon-git.version> <!-- Do not upgrade to 2.0.4 as it does not work with ssh properly -->
+    <wagon-ssh.version>3.0.0</wagon-ssh.version>
+
+    <!--
+     | OSGi configuration properties
+    -->
+    <osgi.symbolicName>${project.groupId}.${project.artifactId}</osgi.symbolicName>
+    <osgi.export>${project.groupId}.*;version=${project.version};-noimport:=true</osgi.export>
+    <osgi.import>*</osgi.import>
+    <osgi.dynamicImport />
+    <osgi.private />
+
+    <!-- Animal Sniffer Signature -->
+    <signature.group>org.codehaus.mojo.signature</signature.group>
+    <signature.artifact>java18</signature.artifact>
+    <signature.version>1.0</signature.version>
+  </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+
+        <plugin>
+          <groupId>com.mycila</groupId>
+          <artifactId>license-maven-plugin</artifactId>
+          <version>${license.version}</version>
+          <configuration>
+            <header>${project.basedir}/license.txt</header>
+            <excludes>
+              <exclude>**/*.ctrl</exclude>
+              <exclude>**/*.dat</exclude>
+              <exclude>**/*.lck</exclude>
+              <exclude>**/*.log</exclude>
+              <exclude>**/*maven-wrapper.properties</exclude>
+              <exclude>**/*MavenWrapperDownloader.java</exclude>
+              <exclude>.factorypath</exclude>
+              <exclude>.gitattributes</exclude>
+              <exclude>mvnw</exclude>
+              <exclude>mvnw.cmd</exclude>
+              <exclude>ICLA</exclude>
+              <exclude>LICENSE</exclude>
+              <exclude>KEYS</exclude>
+              <exclude>NOTICE</exclude>
+            </excludes>
+            <mapping>
+              <xml.vm>XML_STYLE</xml.vm>
+            </mapping>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>com.mycila</groupId>
+              <artifactId>license-maven-plugin-git</artifactId>
+              <version>${license.version}</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+
+        <!-- Antrun here only to override eclipse settings -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-antrun-plugin</artifactId>
+            <version>${antrun.version}</version>
+        </plugin>
+
+        <!-- Assembly here only to override eclipse settings -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>${assembly.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>${clean.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${compiler.version}</version>
+          <configuration>
+            <optimize>true</optimize>
+            <!-- Slightly faster builds, see https://issues.apache.org/jira/browse/MCOMPILER-209 -->
+            <useIncrementalCompilation>false</useIncrementalCompilation>
+          </configuration>
+        </plugin>
+
+        <plugin>
+          <groupId>org.eluder.coveralls</groupId>
+          <artifactId>coveralls-maven-plugin</artifactId>
+          <version>${coveralls.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>${dependency.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${deploy.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>${install.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-pdf-plugin</artifactId>
+          <version>${pdf.version}</version>
+          <executions>
+            <execution>
+              <id>pdf</id>
+              <phase>prepare-package</phase>
+              <goals>
+                <goal>pdf</goal>
+              </goals>
+              <configuration>
+                <includeReports>false</includeReports>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>${release.version}</version>
+          <configuration>
+            <autoVersionSubmodules>true</autoVersionSubmodules>
+            <mavenExecutorId>forked-path</mavenExecutorId>
+            <useReleaseProfile>false</useReleaseProfile>
+            <releaseProfiles>release</releaseProfiles>
+          </configuration>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>${resource.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-shade-plugin</artifactId>
+          <version>${shade.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>${site.version}</version>
+          <executions>
+            <execution>
+              <id>attach-descriptor</id>
+              <goals>
+                <goal>attach-descriptor</goal>
+              </goals>
+            </execution>
+          </executions>
+          <dependencies>
+            <dependency>
+              <groupId>net.trajano.wagon</groupId>
+              <artifactId>wagon-git</artifactId>
+              <version>${wagon-git.version}</version>
+            </dependency>
+            <!-- Additional entries for version site tracking only -->
+            <dependency>
+              <groupId>org.apache.maven.skins</groupId>
+              <artifactId>maven-fluido-skin</artifactId>
+              <version>${fluido.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>org.apache.maven.wagon</groupId>
+              <artifactId>wagon-ssh</artifactId>
+              <version>${wagon-ssh.version}</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>${surefire.version}</version>
+          <configuration>
+            <!-- In case of jmockit usage with jdk9 -->
+            <argLine>-Djdk.attach.allowAttachSelf</argLine>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.junit.platform</groupId>
+              <artifactId>junit-platform-surefire-provider</artifactId>
+              <version>${junit-platform.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>org.junit.jupiter</groupId>
+              <artifactId>junit-jupiter-engine</artifactId>
+              <version>${junit-engine.version}</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+
+        <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>${jacoco.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>versions-maven-plugin</artifactId>
+          <version>${versions.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>net.revelc.code.formatter</groupId>
+          <artifactId>formatter-maven-plugin</artifactId>
+          <version>${formatter.version}</version>
+          <dependencies>
+            <dependency>
+              <groupId>com.github.hazendaz</groupId>
+              <artifactId>build-tools</artifactId>
+              <version>${build-tools.version}</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+
+      </plugins>
+    </pluginManagement>
+
+    <plugins>
+      <!-- Checkstyle dependencies required here or they won't be used (per maven) -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>${checkstyle.plugin}</version>
+        <dependencies>
+          <dependency>
+            <groupId>com.puppycrawl.tools</groupId>
+            <artifactId>checkstyle</artifactId>
+            <version>${checkstyle-core.version}</version>
+          </dependency>
+          <dependency>
+            <groupId>com.github.hazendaz</groupId>
+            <artifactId>build-tools</artifactId>
+            <version>${build-tools.version}</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>${enforcer.version}</version>
+        <executions>
+          <execution>
+            <id>enforce-java</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireJavaVersion>
+                  <version>[${maven.compiler.source},)</version>
+                </requireJavaVersion>
+                <requireMavenVersion>
+                  <version>[${maven.min-version},)</version>
+                </requireMavenVersion>
+                <requirePluginVersions>
+                  <message>[ERROR] Best Practice is to always define plugin versions!</message>
+                  <banLatest>true</banLatest>
+                  <banRelease>true</banRelease>
+                  <banSnapshots>true</banSnapshots>
+                  <phases>clean,deploy,site</phases>
+                </requirePluginVersions>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!--
+       | Make sure we only use defined java version methods
+      -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>animal-sniffer-maven-plugin</artifactId>
+        <version>${animal.version}</version>
+        <configuration>
+          <signature>
+            <groupId>${signature.group}</groupId>
+            <artifactId>${signature.artifact}</artifactId>
+            <version>${signature.version}</version>
+          </signature>
+          <!-- TODO: Remove these once confirmed no longer needed -->
+          <annotations>
+            <annotation>org.apache.ibatis.lang.UsesJava7</annotation>
+            <annotation>org.apache.ibatis.lang.UsesJava8</annotation>
+          </annotations>
+        </configuration>
+        <executions>
+          <execution>
+            <id>check-java-compat</id>
+            <phase>process-classes</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <version>${bundle.version}</version>
+        <executions>
+          <execution>
+            <id>bundle-manifest</id>
+            <phase>process-classes</phase>
+            <goals>
+              <goal>manifest</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <excludeDependencies>true</excludeDependencies>
+          <manifestLocation>${project.build.directory}/osgi</manifestLocation>
+          <supportedProjectTypes>
+            <supportedProjectType>jar</supportedProjectType>
+            <supportedProjectType>bundle</supportedProjectType>
+            <supportedProjectType>war</supportedProjectType>
+            <supportedProjectType>maven-plugin</supportedProjectType>
+          </supportedProjectTypes>
+          <instructions>
+            <!--
+             | stops the "uses" clauses being added to "Export-Package" manifest entry
+            -->
+            <_nouses>true</_nouses>
+            <!--
+             | Stop the JAVA_1_n_HOME variables from being treated as headers by Bnd (TODO: Review these, added 7, 8, and 9 to match -->
+            -->
+            <_removeheaders>JAVA_1_3_HOME,JAVA_1_4_HOME,JAVA_1_5_HOME,JAVA_1_6_HOME,JAVA_1_7_HOME,JAVA_1_8_HOME,JAVA_1_9_HOME</_removeheaders>
+            <Bundle-SymbolicName>${osgi.symbolicName}</Bundle-SymbolicName>
+            <Export-Package>${osgi.export}</Export-Package>
+            <Private-Package>${osgi.private}</Private-Package>
+            <Import-Package>${osgi.import}</Import-Package>
+            <DynamicImport-Package>${osgi.dynamicImport}</DynamicImport-Package>
+            <Bundle-DocURL>${project.url}</Bundle-DocURL>
+          </instructions>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>${jar.version}</version>
+        <configuration>
+          <archive>
+            <manifestFile>${project.build.directory}/osgi/MANIFEST.MF</manifestFile>
+            <manifest>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+            </manifest>
+            <manifestEntries>
+              <Implementation-Build-Date>${maven.build.timestamp}</Implementation-Build-Date>
+              <X-Compile-Source-JDK>${maven.compiler.source}</X-Compile-Source-JDK>
+              <X-Compile-Target-JDK>${maven.compiler.target}</X-Compile-Target-JDK>
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>clirr-maven-plugin</artifactId>
+        <version>${clirr.version}</version>
+        <configuration>
+          <comparisonVersion>${clirr.comparisonVersion}</comparisonVersion>
+          <failOnError>false</failOnError>
+          <failOnWarning>false</failOnWarning>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-scm-plugin</artifactId>
+        <version>${scm.version}</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>prepare-agent</id>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+
+    <resources>
+      <resource>
+        <directory>${project.basedir}/src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+      <resource>
+        <directory>${project.basedir}</directory>
+        <targetPath>META-INF</targetPath>
+        <includes>
+          <include>LICENSE</include>
+          <include>NOTICE</include>
+        </includes>
+      </resource>
+    </resources>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-ssh</artifactId>
+        <version>${wagon-ssh.version}</version>
+      </extension>
+    </extensions>
+  </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>${project-info.version}</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>${javadoc.version}</version>
+        <reportSets>
+          <reportSet>
+            <id>default</id>
+            <reports>
+              <report>javadoc</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jxr-plugin</artifactId>
+        <version>${jxr.version}</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jdepend-maven-plugin</artifactId>
+        <version>${jdepend.version}</version>
+      </plugin>
+
+      <plugin>
+        <groupId>com.github.spotbugs</groupId>
+        <artifactId>spotbugs-maven-plugin</artifactId>
+        <version>${spotbugs.version}</version>
+        <configuration>
+          <xmlOutput>true</xmlOutput>
+          <xmlOutputDirectory>${project.build.directory}/spotbugs-reports</xmlOutputDirectory>
+          <spotbugsXmlOutputDirectory>${project.build.directory}/spotbugs-reports</spotbugsXmlOutputDirectory>
+          <threshold>High</threshold>
+          <effort>Max</effort>
+          <visitors>FindDeadLocalStores,UnreadFields</visitors>
+          <onlyAnalyze>${spotbugs.onlyAnalyze}</onlyAnalyze>
+          <relaxed>true</relaxed>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>${surefire.version}</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-changes-plugin</artifactId>
+        <version>${changes.version}</version>
+        <configuration>
+          <issueLinkTemplate>%URL%/issues/%ISSUE%</issueLinkTemplate>
+        </configuration>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>changes-report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>${checkstyle.plugin}</version>
+        <configuration>
+            <configLocation>${checkstyle.config}</configLocation>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>${pmd.version}</version>
+        <configuration>
+          <analysisCache>true</analysisCache>
+          <linkXRef>true</linkXRef>
+          <minimumTokens>100</minimumTokens>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>taglist-maven-plugin</artifactId>
+        <version>${taglist.version}</version>
+        <configuration>
+          <tagListOptions>
+            <tagClasses>
+              <tagClass>
+                <displayName>Todo Work</displayName>
+                <tags>
+                  <tag>
+                    <matchString>TODO</matchString>
+                    <matchType>ignoreCase</matchType>
+                  </tag>
+                  <tag>
+                    <matchString>FIXME</matchString>
+                    <matchType>ignoreCase</matchType>
+                  </tag>
+                </tags>
+              </tagClass>
+            </tagClasses>
+          </tagListOptions>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>clirr-maven-plugin</artifactId>
+        <version>${clirr.version}</version>
+        <configuration>
+          <comparisonVersion>${clirr.comparisonVersion}</comparisonVersion>
+        </configuration>
+      </plugin>
+
+      <!-- This plugin will fail if any POM is marked as Byte Order Mark is UTF-8 (BOM).
+         | If this occurs, create a new POM and move the contents in order to fix.
+         | For reference, this was a problem with mybatis/mybatis-spring poms. -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>${versions.version}</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>${jacoco.version}</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <!-- select non-aggregate reports -->
+              <report>report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+
+    </plugins>
+  </reporting>
+
+  <profiles>
+    <profile>
+      <id>format</id>
+      <activation>
+        <file>
+          <exists>format.xml</exists>
+        </file>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>net.revelc.code.formatter</groupId>
+            <artifactId>formatter-maven-plugin</artifactId>
+            <configuration>
+              <configFile>eclipse-formatter-config-2space.xml</configFile>
+            </configuration>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>format</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>release</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>${source.version}</version>
+            <executions>
+              <execution>
+                <id>attach-sources</id>
+                <goals>
+                  <goal>jar-no-fork</goal>
+                </goals>
+                <configuration>
+                  <archive>
+                    <manifest>
+                      <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                      <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                    </manifest>
+                    <manifestEntries>
+                      <Implementation-Build-Date>${maven.build.timestamp}</Implementation-Build-Date>
+                      <X-Compile-Source-JDK>${maven.compiler.source}</X-Compile-Source-JDK>
+                      <X-Compile-Target-JDK>${maven.compiler.target}</X-Compile-Target-JDK>
+                    </manifestEntries>
+                  </archive>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>${javadoc.version}</version>
+            <executions>
+              <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+                <configuration>
+                  <archive>
+                    <manifest>
+                      <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                      <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                    </manifest>
+                    <manifestEntries>
+                      <Implementation-Build-Date>${maven.build.timestamp}</Implementation-Build-Date>
+                      <X-Compile-Source-JDK>${maven.compiler.source}</X-Compile-Source-JDK>
+                      <X-Compile-Target-JDK>${maven.compiler.target}</X-Compile-Target-JDK>
+                    </manifestEntries>
+                  </archive>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>${gpg.version}</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>bundle</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>${assembly.version}</version>
+            <dependencies>
+              <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>base-bundle-descriptor</artifactId>
+                <version>${base-bundle.version}</version>
+              </dependency>
+            </dependencies>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>single</goal>
+                </goals>
+                <configuration>
+                  <attach>true</attach>
+                  <appendAssemblyId>false</appendAssemblyId>
+                  <descriptorRefs>
+                    <descriptorRef>base-bundle</descriptorRef>
+                  </descriptorRefs>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- TODO: We need to add jdk 9+ support which is indicated differently -->
+    <profile>
+      <id>javadoc.java8</id>
+      <activation>
+        <jdk>[1.8,)</jdk>
+      </activation>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-javadoc-plugin</artifactId>
+              <version>${javadoc.version}</version>
+              <configuration>
+                <additionalparam>-Xdoclint:-missing</additionalparam>
+              </configuration>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
+
+    <profile>
+      <id>license</id>
+      <activation>
+        <file>
+          <!-- project.basedir is invalid in this location, use basedir -->
+          <exists>${basedir}/license.txt</exists>
+        </file>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.mycila</groupId>
+            <artifactId>license-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <phase>compile</phase>
+                <goals>
+                  <goal>format</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>eclipse</id>
+      <activation>
+        <property>
+          <name>m2e.version</name>
+        </property>
+      </activation>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+            <plugin>
+              <groupId>org.eclipse.m2e</groupId>
+              <artifactId>lifecycle-mapping</artifactId>
+              <version>${lifecycle.version}</version>
+              <configuration>
+                <lifecycleMappingMetadata>
+                  <pluginExecutions>
+                    <pluginExecution>
+                      <pluginExecutionFilter>
+                        <groupId>org.apache.felix</groupId>
+                        <artifactId>maven-bundle-plugin</artifactId>
+                        <versionRange>[${bundle.version},)</versionRange>
+                        <goals>
+                          <goal>manifest</goal>
+                        </goals>
+                      </pluginExecutionFilter>
+                      <action>
+                        <ignore />
+                      </action>
+                    </pluginExecution>
+                    <pluginExecution>
+                      <pluginExecutionFilter>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <versionRange>[${jacoco.version},)</versionRange>
+                        <goals>
+                          <goal>prepare-agent</goal>
+                        </goals>
+                      </pluginExecutionFilter>
+                      <action>
+                        <ignore />
+                      </action>
+                    </pluginExecution>
+                    <pluginExecution>
+                      <pluginExecutionFilter>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-enforcer-plugin</artifactId>
+                        <versionRange>[${enforcer.version},)</versionRange>
+                        <goals>
+                          <goal>enforce</goal>
+                        </goals>
+                      </pluginExecutionFilter>
+                      <action>
+                        <ignore />
+                      </action>
+                    </pluginExecution>
+                    <pluginExecution>
+                      <pluginExecutionFilter>
+                        <groupId>com.mycila</groupId>
+                        <artifactId>license-maven-plugin</artifactId>
+                        <versionRange>[${license.version},)</versionRange>
+                        <goals>
+                          <goal>format</goal>
+                        </goals>
+                      </pluginExecutionFilter>
+                      <action>
+                        <ignore />
+                      </action>
+                    </pluginExecution>
+                    <pluginExecution>
+                      <pluginExecutionFilter>
+                        <groupId>net.revelc.code.formatter</groupId>
+                        <artifactId>formatter-maven-plugin</artifactId>
+                        <versionRange>[${formatter.version},)</versionRange>
+                        <goals>
+                          <goal>format</goal>
+                        </goals>
+                      </pluginExecutionFilter>
+                      <action>
+                        <ignore />
+                      </action>
+                    </pluginExecution>
+                  </pluginExecutions>
+                </lifecycleMappingMetadata>
+              </configuration>
+            </plugin>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <configuration>
+                <source>${maven.compiler.testSource}</source>
+                <target>${maven.compiler.testTarget}</target>
+              </configuration>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
+  </profiles>
+
+</project>
