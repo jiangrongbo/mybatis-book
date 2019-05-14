@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+       Copyright 2015-2018 the original author or authors.
+
+       Licensed under the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the License.
+       You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+       Unless required by applicable law or agreed to in writing, software
+       distributed under the License is distributed on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+       See the License for the specific language governing permissions and
+       limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.mybatis</groupId>
+    <artifactId>mybatis-parent</artifactId>
+    <version>31-SNAPSHOT</version>
+    <relativePath />
+  </parent>
+
+  <groupId>org.mybatis.caches</groupId>
+  <artifactId>mybatis-redis</artifactId>
+  <version>1.0.0-beta3-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>mybatis-redis</name>
+  <description>Redis support for MyBatis Cache</description>
+  <url>https://github.com/mybatis/redis-cache</url>
+
+  <inceptionYear>2015</inceptionYear>
+
+  <scm>
+    <url>http://github.com/mybatis/redis-cache</url>
+    <connection>scm:git:ssh://github.com/mybatis/redis-cache.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/mybatis/redis-cache.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+  <issueManagement>
+    <system>GitHub Issue Management</system>
+    <url>https://github.com/mybatis/redis-cache/issues</url>
+  </issueManagement>
+  <ciManagement>
+    <system>Travis CI</system>
+    <url>https://travis-ci.org/mybatis/redis-cache</url>
+  </ciManagement>
+  <distributionManagement>
+    <site>
+      <id>gh-pages</id>
+      <name>Mybatis GitHub Pages</name>
+      <url>git:ssh://git@github.com/mybatis/redis-cache.git?gh-pages#</url>
+    </site>
+  </distributionManagement>
+
+  <properties>
+    <clirr.comparisonVersion>1.0.3</clirr.comparisonVersion>
+    <findbugs.onlyAnalyze>org.mybatis.caches.redis.*</findbugs.onlyAnalyze>
+    <gcu.product>Cache</gcu.product>
+  </properties>
+
+  <dependencies>
+    <!--
+     | Provided dependencies
+    -->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.4.5</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!--
+     | compile dependencies
+    -->
+    <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+      <version>2.9.0</version>
+      <scope>compile</scope>
+    </dependency>
+    
+    <!--
+     | kryo dependencies
+    -->
+    <dependency>
+      <groupId>com.esotericsoftware</groupId>
+      <artifactId>kryo</artifactId>
+      <version>4.0.1</version>
+      <scope>compile</scope>
+      <optional>true</optional>
+    </dependency>
+
+    <!--
+     | trick to fix javadoc generation
+    -->
+    <dependency>
+      <groupId>javax.transaction</groupId>
+      <artifactId>transaction-api</artifactId>
+      <version>1.1</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!--
+     | test dependencies
+    -->
+    <dependency>
+      <groupId>org.junit.vintage</groupId>
+      <artifactId>junit-vintage-engine</artifactId>
+      <version>4.12.2</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>1.7.25</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <profiles>
+    <profile>
+      <id>noTest</id>
+      <activation>
+        <property>
+          <name>noTest</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+              <skipTests>true</skipTests>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+</project>
