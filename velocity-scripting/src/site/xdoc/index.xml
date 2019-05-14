@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+       Copyright 2012-2018 the original author or authors.
+
+       Licensed under the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the License.
+       You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+       Unless required by applicable law or agreed to in writing, software
+       distributed under the License is distributed on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+       See the License for the specific language governing permissions and
+       limitations under the License.
+
+-->
+<document xmlns="http://maven.apache.org/XDOC/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+
+  <properties>
+    <title>MyBatis-Velocity</title>
+    <author email="mybatis-dev@googlegroups.com">The MyBatis Team</author>
+  </properties>
+
+  <body>
+    <section name="Introduction">
+      <p>
+      mybatis-velocity is an extension that allows you to use the Apache Velocity scripting language
+      to generate your dynamic SQL queries on the fly.
+      </p>
+      <p>
+        If you are not familiar with apache velocity, you can learn it from its documentation site:
+        <ul>
+          <li>
+            <a href="http://velocity.apache.org/engine/releases/velocity-1.7/vtl-reference-guide.html">Velocity Template Language (VTL) Reference</a>
+          </li>
+        </ul>
+      </p>
+    </section>
+    <section name="Install">
+      <ol>
+        <li>
+          <p>Put the mybatis-velocity-&lt;version&gt;.jar in your classpath.</p>
+          <p>If you are using maven, just add a dependency to:
+            <ul>
+              <li>GroupId: org.mybatis.scripting</li>
+              <li>ArtifactId: mybatis-velocity</li>
+            </ul>
+          </p>
+          <p></p>
+        </li>
+        <li>
+          <p>Register the language driver alias in your mybatis configuration file:</p>
+          <source><![CDATA[
+<configuration>
+  ...
+  <typeAliases>
+    <typeAlias alias="velocity" type="org.mybatis.scripting.velocity.Driver"/>
+  </typeAliases>
+  ...
+</configuration>]]></source>
+        </li>
+        <li>
+          <p>Optional: Set the velocity as your default scripting language:</p>
+          <source><![CDATA[
+<configuration>
+  ...
+  <settings>
+    <setting name="defaultScriptingLanguage" value="velocity"/>
+  </settings>
+  ...
+</configuration>]]></source>
+        </li>
+      </ol>
+
+    </section>
+    <section name="Usage">
+      <p>Just write your dynamic queries and use velocity:</p>
+      <p>Example:
+      <source><![CDATA[
+<select id="findPerson" lang="velocity">
+  #set( $pattern = $_parameter.name + '%' )
+  SELECT *
+  FROM person
+  WHERE name LIKE @{pattern, jdbcType=VARCHAR}
+</select>
+      ]]></source>
+      </p>
+      <p>
+        Note:
+        <ul>
+          <li>#{...} syntax is replaced by @{...} syntax to avoid collisions with VTL</li>
+        </ul>
+      </p>
+    </section>
+    <section name="Custom directives">
+      <subsection name="trim">
+        <h5>#trim( prefix prefixOverrides suffix suffixOverrides ) body #end</h5>
+        <table>
+          <thead>
+            <tr>
+              <th>Arg</th>
+              <th>Description</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>prefix</td>
+              <td>Text to prepend if the body is not empty</td>
+              <td>String</td>
+              <td>Empty String</td>
+              <td>"WHERE "</td>
+            </tr>
+            <tr>
+              <td>prefixOverrides</td>
+              <td>Text to be removed from the body if it is at the beginning</td>
+              <td>String list delimited by |</td>
+              <td>Empty String</td>
+              <td>"AND |OR "</td>
+            </tr>
+            <tr>
+              <td>suffix</td>
+              <td>Text to appended if the body is not empty</td>
+              <td>String</td>
+              <td>Empty String</td>
+              <td>"] "</td>
+            </tr>
+            <tr>
+              <td>suffixOverrides</td>
+              <td>Text to be removed from the body if it is at the end</td>
+              <td>String list delimited by |</td>
+              <td>Empty String</td>
+              <td>","</td>
+            </tr>
+          </tbody>
+        </table>
+      </subsection>
+      <subsection name="where">
+        <h5>#where() body #end</h5>
+        <p>Removes any AND or OR from the beginning, then if the result is not empty, prepends WHERE at the beginning</p>
+      </subsection>
+      <subsection name="mset">
+        <h5>#mset() body #end</h5>
+        <p>Removes any "," from the end, then if the result is not empty, prepends SET at the beginning</p>
+      </subsection>
+      <subsection name="repeat">
+        <h5>#repeat( collection  var  separator  open  close ) body #end</h5>
+        <p>
+          Same as #foreach, but with special features:
+          <ul>
+            <li>Support for iterative parameter bindings via @{...} syntax</li>
+            <li>Automatic separator and open/close string management</li>
+          </ul>
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Arg</th>
+              <th>Description</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>collection</td>
+              <td>List or array to iterate</td>
+              <td>List or Array</td>
+              <td>Empty List</td>
+              <td>$_parameter.selectedIds</td>
+            </tr>
+            <tr>
+              <td>var</td>
+              <td>Variable to be used in the loop</td>
+              <td>Reference</td>
+              <td></td>
+              <td>$item</td>
+            </tr>
+            <tr>
+              <td>separator</td>
+              <td>String to be inserted between iterations</td>
+              <td>String</td>
+              <td>Empty String</td>
+              <td>","</td>
+            </tr>
+            <tr>
+              <td>open</td>
+              <td>String to be prepended at the beginning</td>
+              <td>String</td>
+              <td>Empty String</td>
+              <td>"("</td>
+            </tr>
+            <tr>
+              <td>close</td>
+              <td>String to be appended at the end</td>
+              <td>String</td>
+              <td>Empty String</td>
+              <td>")"</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Example:</p>
+        <source><![CDATA[
+SELECT *
+FROM City
+#where()
+  #repeat( $_parameter.ids $id "," " state_id IN (" ")" )
+    @{id}
+  #end
+#end
+        ]]></source>
+      </subsection>
+      <subsection name="in">
+        <h5>#in( collection  var  field ) body #end</h5>
+        <p>
+          Generates a SQL IN clause and breaks it into groups of 1000 items seperated by an OR clause to get around database limitations on the maximum number of items that can be handled. 
+          It also supports iterative parameter bindings via @{...} syntax.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Arg</th>
+              <th>Description</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>collection</td>
+              <td>List or array to iterate</td>
+              <td>List or Array</td>
+              <td>Empty List</td>
+              <td>$_parameter.selectedIds</td>
+            </tr>
+            <tr>
+              <td>var</td>
+              <td>Variable to be used in the loop</td>
+              <td>Reference</td>
+              <td></td>
+              <td>$item</td>
+            </tr>
+            <tr>
+              <td>field</td>
+              <td>Field name to be inserted before the IN clause</td>
+              <td>String</td>
+              <td>Empty String</td>
+              <td>"state_id"</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Example:</p>
+        <source><![CDATA[
+SELECT *
+FROM City
+#where()
+  #in( $_parameter.ids $id "state_id" )
+    @{id}
+  #end
+#end
+        ]]></source>
+      </subsection>
+    </section>
+    <section name="User Defined Directives">
+      <p>
+      mybatis-velocity allows you to write your own velocity directive:
+      </p>
+        <ul>
+          <li>
+             Create a property file named  mybatis-velocity.properties and put in on the classpath.
+          </li>
+          <li>
+             Create your own velocity directive.
+          </li>
+          <li>
+             Add the directive to the property file.
+          </li>
+         <li>
+             Use the directive in the mapper xml file.
+            <br/>
+          </li>
+        </ul>
+        <p>Example:</p>
+
+        <source><![CDATA[
+// User defined directive
+package com.myproject.directives;
+
+public class MyDirective extends Directive {
+  
+}
+
+//mybatis-velocity.properties
+userdirective=com.myproject.directives.MyDirective,com.myproject.directives.SpecialDirective
+
+// mapper xml file
+SELECT *
+FROM City
+  #myDirective()
+    ......
+  #end
+        ]]></source>
+
+    </section>
+    <section name="MyBatis specific syntax">
+      <subsection name="Parameter Bindings">
+        <p>@{ property, attr1=val1, attr2=val2, ... }</p>
+        <p>Where attrs must be any of: javaType, jdbcType, mode, numericScale, resultMap, typeHandler, jdbcTypeName</p>
+      </subsection>
+    </section>
+  </body>
+
+</document>

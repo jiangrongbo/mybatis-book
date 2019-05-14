@@ -1,0 +1,43 @@
+language: java
+sudo: false
+
+matrix:
+  include:
+# 11
+    - env: JDK='Oracle JDK 11'
+      install: . ./install-jdk.sh -F 11 -L BCL
+    - env: JDK='OpenJDK 11'
+      install: . ./install-jdk.sh -F 11 -L GPL
+# 10
+    - env: JDK='Oracle JDK 10'
+      install: . ./install-jdk.sh -F 10 -L BCL
+    - env: JDK='OpenJDK 10'
+      install: . ./install-jdk.sh -F 10 -L GPL
+# 9
+    - env: JDK='Oracle JDK 9'
+      jdk: oraclejdk9
+    - env: JDK='OpenJDK 9'
+      install: . ./install-jdk.sh -F 9
+# 8
+    - env: JDK='Oracle JDK 8'
+      jdk: oraclejdk8
+    - env: JDK='OpenJDK 8'
+      jdk: openjdk8
+
+before_install:
+  - wget https://raw.githubusercontent.com/sormuras/bach/master/install-jdk.sh
+  - ./mvnw install -q -DskipTests=true
+
+install: true
+
+script:
+    ./mvnw install -B -V
+
+after_success:
+  - chmod -R 777 ./travis/after_success.sh
+  - ./travis/after_success.sh
+
+env:
+  global:
+    - secure: "dgaO+01IuaJgtHpZ2z3leAfU91vgfRtjJpCuGdhvoSs03uU7kuQGXmm8Fg8b\n8Z8DqBCO+mJY47WNrwlBrb2Xbo12YRxZViG9tEnhvaWogNKJ62wLBIOC/wvD\nLeQZeAcgXQvbA2Ug8Lg0NXxqtI5depdMOHzA2QSApLl2izW97Wc="
+    - secure: "OowVY4Gao6pTRQFgHHLVx8gEtBeAOH6A7jLubFDzBizLGFFEHvEfV+PckM9C\nHRXpxCjGyWxBu0O9yClda0BXXQhNTGgAvso8A/XvZxr06dHIZy//QoR3U6GS\nzdVPaERRPSJEzDUEHdquhpWLiJd/tQaky9gK70HabjDf7+FcOoo="
