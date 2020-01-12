@@ -4,7 +4,7 @@ Mybatis源码深度解析
 [![Total lines](https://tokei.rs/b1/github/rongbo-j/mybatis-book?category=lines)](https://github.com/rongbo-j/mybatis-book)
 [![Build Status](https://travis-ci.org/rongbo-j/mybatis-book.svg?branch=master)](https://travis-ci.org/rongbo-j/mybatis-book)
 ### 书籍封面
-![](./img/mybatis-book.png)  
+![书籍封面](https://github.com/rongbo-j/mybatis-book/raw/master/img/mybatis-book.png)  
 
 ### 图书目录  
 <b><details><summary>点我查看</summary></b>
