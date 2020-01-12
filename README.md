@@ -3,6 +3,8 @@ Mybatis源码深度解析
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2f0a0191b02448e6919aca6ce12a1584)](https://app.codacy.com/app/https://app.codacy.com?utm_source=github.com&utm_medium=referral&utm_content=rongbo-j/mybatis-book&utm_campaign=Badge_Grade_Settings)
 [![Total lines](https://tokei.rs/b1/github/rongbo-j/mybatis-book?category=lines)](https://github.com/rongbo-j/mybatis-book)
 [![Build Status](https://travis-ci.org/rongbo-j/mybatis-book.svg?branch=master)](https://travis-ci.org/rongbo-j/mybatis-book)
+### 书籍封面
+![](./img/mybatis-book.png)  
 
 ### 图书目录  
 <b><details><summary>点我查看</summary></b>
@@ -202,7 +204,7 @@ Mybatis源码深度解析
 
 </details>
 
-<b><details><summary>📚 第十三章 Mybatis与Spring整合案例</summary></b>
+<b><details><summary>📚 第十三章 Mybatis Spring实现原理</summary></b>
 > 本章介绍了Spring框架中的一些核心概念，并介绍了Spring IoC容器的使用过程。接着介绍了Mybatis和Spring整合后，动态代理产生的Mapper对象是如何与Spring Ioc容器进行关联的，最后介绍了Mybatis整合Spring事务管理的实现原理。
 
 </details>
