@@ -7,7 +7,6 @@ Mybatis源码深度解析
 ![书籍封面](https://github.com/rongbo-j/mybatis-book/raw/master/img/mybatis-book.png)  
 
 ### 图书目录  
-<b><details><summary>点我查看</summary></b>
 前言	4  
 第1篇 Mybatis3源码	7  
 第1章 搭建Mybatis源码环境	7  
@@ -140,7 +139,6 @@ Mybatis源码深度解析
 13.3 Mapper动态代理对象注册过程	256  
 13.4 Mybatis整合Spring事务管理	260  
 13.5 本章小结	264
-</details>
 
 ### 内容概要  
 本书主要分为两个篇章，第一篇章为Mybatis3源码篇，从第1章至11章，主要介绍Mybatis框架各个特性的实现原理。第二篇章为Mybatis Spring源码篇，主要介绍Mybatis框架与Spring框架整合原理。  
