@@ -207,3 +207,5 @@ Mybatis源码深度解析
 
 </details>
 
+### 读者交流群  
+![书籍封面](https://github.com/rongbo-j/mybatis-book/raw/master/img/qqgroup.jpeg)  
