@@ -208,4 +208,4 @@ Mybatis源码深度解析
 </details>
 
 ### 读者交流群  
-![交流群](https://github.com/rongbo-j/mybatis-book/raw/master/img/qqgroup.png)  
+企鹅群：1055227297
