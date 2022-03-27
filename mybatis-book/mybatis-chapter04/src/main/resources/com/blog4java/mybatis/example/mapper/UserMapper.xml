@@ -6,13 +6,13 @@
       id,create_time, name, password, phone, nick_name
     </sql>
 
-    <select id="listAllUser"  resultType="com.blog4java.mybatis.example.entity.User" >
+    <select id="listAllUser"  resultType="com.blog4java.mybatis.example.entity.UserEntity" >
         select
         <include refid="userAllField"/>
         from user
     </select>
 
-    <select id="getUserByEntity"  resultType="com.blog4java.mybatis.example.entity.User">
+    <select id="getUserByEntity"  resultType="com.blog4java.mybatis.example.entity.UserEntity">
         select
         <include refid="userAllField"/>
         from user
@@ -29,7 +29,7 @@
         </where>
     </select>
 
-    <select id="getUserByPhone" resultType="com.blog4java.mybatis.example.entity.User">
+    <select id="getUserByPhone" resultType="com.blog4java.mybatis.example.entity.UserEntity">
         select
         <include refid="userAllField"/>
         from user
